@@ -6,129 +6,168 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #fff;
       margin: 0;
-      padding: 40px;
-      color: #222;
-      line-height: 1.6;
+      color: #111;
     }
 
+    /* Navigation */
+    nav {
+      background-color: #000;
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #ccc;
+    }
+
+    /* Header */
     header {
       text-align: center;
-      padding: 30px 0;
+      padding: 40px 20px 20px;
     }
 
     header img {
-      width: 140px;
-      max-width: 100%;
+      width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
 
     header h1 {
-      font-size: 42px;
-      color: #0055a5;
+      font-size: 36px;
       margin: 0;
+      color: #000;
     }
 
     header p {
-      font-size: 17px;
+      font-size: 16px;
+      color: #444;
       margin-top: 10px;
-      color: #666;
     }
 
-    h2 {
-      margin-top: 40px;
-      font-size: 22px;
-      color: #333;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-
+    /* Product Cards */
     .product {
-      background-color: #fdfdfd;
-      border-radius: 14px;
+      background-color: #f9f9f9;
+      border-radius: 12px;
       padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease;
-    }
-
-    .product:hover {
-      transform: scale(1.01);
+      margin: 30px auto;
+      max-width: 600px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .product img {
       width: 100%;
       max-width: 280px;
-      margin: 0 auto 20px;
       display: block;
+      margin: 0 auto 20px;
       border-radius: 10px;
+    }
+
+    .product h2 {
+      font-size: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .product ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product li {
+      font-size: 15px;
+      margin-bottom: 6px;
     }
 
     .buy-button {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 15px;
       padding: 10px 20px;
-      background-color: #0055a5;
+      background-color: #000;
       color: #fff;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
       text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
       transition: background-color 0.3s ease;
     }
 
     .buy-button:hover {
-      background-color: #003f7f;
+      background-color: #333;
     }
 
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
+    /* Comparison Table */
+    .comparison {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    li {
-      margin-bottom: 6px;
-      font-size: 15px;
+    .comparison h2 {
+      font-size: 22px;
+      color: #000;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     table {
       width: 100%;
-      margin-top: 20px;
-      border-collapse: separate;
-      border-spacing: 0;
+      border-collapse: collapse;
       font-size: 14px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      border-radius: 10px;
-      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
     }
 
-    thead th {
-      background-color: #0055a5;
+    thead {
+      background-color: #000;
       color: #fff;
-      padding: 14px;
-      font-size: 15px;
     }
 
-    tbody td {
-      background-color: #fafafa;
+    th, td {
       padding: 12px;
-      border-top: 1px solid #eee;
+      border: 1px solid #ddd;
       text-align: center;
     }
 
     tbody tr:nth-child(even) td {
-      background-color: #f0f4f8;
+      background-color: #f4f4f4;
     }
 
     tbody tr:hover td {
-      background-color: #e0ecf6;
+      background-color: #eaeaea;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#">หน้าแรก</a>
+    <a href="#">รองเท้าวิ่ง</a>
+    <a href="#">โปรโมชั่น</a>
+    <a href="#">ติดต่อเรา</a>
+  </nav>
 
   <header>
     <img src="logo.png" alt="New Balance">
@@ -137,83 +176,22 @@
   </header>
 
   <div class="product">
-    <h2>1. FuelCell Rebel v5</h2>
+    <h2>FuelCell Rebel v5</h2>
     <img src="FuelCellRebelv5.jpg" alt="Fuel Cell Rebel v5">
     <ul>
       <li><strong>ราคา:</strong> ฿4,990</li>
       <li><strong>น้ำหนัก:</strong> ~220 กรัม</li>
-      <li><strong>ดรอป:</strong> 6 มม.</li>
       <li><strong>โฟม:</strong> FuelCell (PEBA/EVA)</li>
       <li><strong>เหมาะสำหรับ:</strong> วิ่งทุกวัน / วิ่งเร็ว</li>
-      <li><strong>สี:</strong> Angora, Urgent Red, White/Mango, London Edition</li>
-      <li><strong>ส่วนประกอบ:</strong> Mesh Upper, FuelCell Midsole, ยาง Outsole</li>
     </ul>
-    <a href="https://www.newbalance.co.th/new-balance-fuelcell-rebel-v4-women-s-running-shoes-drift-red-with-black-cement-and-melon-water.html" class="buy-button">🛒 สั่งซื้อ </a>
+    <a href="https://www.newbalance.co.th/new-balance-fuelcell-rebel-v4-women-s-running-shoes-drift-red-with-black-cement-and-melon-water.html" class="buy-button">🛒 สั่งซื้อ</a>
   </div>
 
   <div class="product">
-    <h2>2. Fresh Foam X 1080 v14</h2>
+    <h2>Fresh Foam X 1080 v14</h2>
     <img src="FreshFoamX1080v14.jpg" alt="Fresh Foam X 1080 v14">
     <ul>
       <li><strong>ราคา:</strong> ฿6,000</li>
       <li><strong>น้ำหนัก:</strong> ~285 กรัม</li>
-      <li><strong>ดรอป:</strong> 6 มม.</li>
       <li><strong>โฟม:</strong> Fresh Foam X</li>
-      <li><strong>เหมาะสำหรับ:</strong> วิ่งไกล / เดินทั่วไป</li>
-      <li><strong>สี:</strong> Black, Clementine, Sea Salt, London Edition, Melon Water</li>
-      <li><strong>ส่วนประกอบ:</strong> Jacquard Mesh Upper, Fresh Foam X Midsole, ยาง Outsole</li>
-    </ul>
-    <a href="https://www.newbalance.co.th/new-balance-fresh-foam-x-1080-v14-men-s-running-shoes-black-with-black-metallic-and-phantom.html?color=7168" class="buy-button">🛒 สั่งซื้อผ่าน </a>
-  </div>
-
-  <div class="product">
-    <h2>3. FuelCell SuperComp Elite v4</h2>
-    <img src="FuelCellSuperCompElitev4.jpg" alt="FuelCell SuperComp Elite v4">
-    <ul>
-      <li><strong>ราคา:</strong> ฿9,000</li>
-      <li><strong>น้ำหนัก:</strong> ~235 กรัม</li>
-      <li><strong>ดรอป:</strong> 4 มม.</li>
-      <li><strong>โฟม:</strong> FuelCell PEBA + Carbon Plate</li>
-      <li><strong>เหมาะสำหรับ:</strong> แข่งมาราธอน</li>
-      <li><strong>สี:</strong> Ekiden Red, White/Orange, London Edition, NYCM Blue/White</li>
-      <li><strong>ส่วนประกอบ:</strong> FantomFit Upper, Carbon Plate, FuelCell Midsole, ยาง Outsole</li>
-    </ul>
-    <a href="https://www.newbalance.co.th/new-balance-fuelcell-sc-elite-v4-men-s-running-shoes-drift-red-with-black-cement-and-melon-water.html?color=6" class="buy-button">🛒 สั่งซื้อผ่าน </a>
-  </div>
-
-  <h2>🔍 เปรียบเทียบรุ่น</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>รุ่น</th>
-        <th>น้ำหนัก</th>
-        <th>ดรอป</th>
-        <th>โฟม</th>
-        <th>ราคา</th>
-        <th>เหมาะสำหรับ</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Rebel v5</td>
-        <td>~220g</td>
-        <td>6mm</td>
-        <td>FuelCell PEBA/EVA</td>
-        <td>฿4,990</td>
-        <td>วิ่งทุกวัน / วิ่งเร็ว</td>
-      </tr>
-      <tr>
-        <td>1080 v14</td>
-        <td>~285g</td>
-        <td>6mm</td>
-        <td>Fresh Foam X</td>
-        <td>฿6,000</td>
-        <td>วิ่งไกล / เดินทั่วไป</td>
-      </tr>
-     <td>Elite v4</td> 
-      <td>~235g</td> 
-      <td>4mm</td> 
-      <td>FuelCell PEBA + Carbon</td> 
-      <td>฿9,000</td> <td>แข่งมาราธอน</td> 
-  </tr>
-  </table>
+      <li><strong>เหมาะสำหรับ:</strong
