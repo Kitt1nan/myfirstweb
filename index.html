@@ -25,9 +25,15 @@
     }
 
     header h1 {
-      font-size: 28px;
+      font-size: 36px;
       color: #0055a5;
       margin: 0;
+    }
+
+    header p {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #666;
     }
 
     h2 {
@@ -54,6 +60,25 @@
       border-radius: 10px;
     }
 
+    .buy-button {
+      display: block;
+      width: fit-content;
+      margin: 10px auto 0;
+      padding: 10px 20px;
+      background-color: #0055a5;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #003f7f;
+    }
+
     ul {
       list-style-type: none;
       padding-left: 0;
@@ -68,30 +93,40 @@
     table {
       width: 100%;
       margin-top: 20px;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
+    thead th {
+      background-color: #0055a5;
+      color: #fff;
+      padding: 12px;
+    }
+
+    tbody td {
+      background-color: #fafafa;
+      padding: 12px;
+      border-top: 1px solid #eee;
       text-align: center;
     }
 
-    th {
-      background-color: #0055a5;
-      color: #fff;
+    tbody tr:nth-child(even) td {
+      background-color: #f0f4f8;
     }
 
-    td {
-      background-color: #fcfcfc;
+    tbody tr:hover td {
+      background-color: #e0ecf6;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt=" New Balance">
+    <img src="logo.png" alt="New Balance">
     <h1>New Balance Running Shoes</h1>
     <p>รองเท้าวิ่งคุณภาพดีจากแบรนด์ New Balance เลือกรุ่นที่ใช่สำหรับสไตล์ของคุณ</p>
   </header>
@@ -108,6 +143,7 @@
       <li><strong>สี:</strong> Angora, Urgent Red, White/Mango, London Edition</li>
       <li><strong>ส่วนประกอบ:</strong> Mesh Upper, FuelCell Midsole, ยาง Outsole</li>
     </ul>
+    <a href="#" class="buy-button">🛒 สั่งซื้อรุ่นนี้</a>
   </div>
 
   <div class="product">
@@ -122,6 +158,7 @@
       <li><strong>สี:</strong> Black, Clementine, Sea Salt, London Edition, Melon Water</li>
       <li><strong>ส่วนประกอบ:</strong> Jacquard Mesh Upper, Fresh Foam X Midsole, ยาง Outsole</li>
     </ul>
+    <a href="#" class="buy-button">🛒 สั่งซื้อรุ่นนี้</a>
   </div>
 
   <div class="product">
@@ -136,42 +173,47 @@
       <li><strong>สี:</strong> Ekiden Red, White/Orange, London Edition, NYCM Blue/White</li>
       <li><strong>ส่วนประกอบ:</strong> FantomFit Upper, Carbon Plate, FuelCell Midsole, ยาง Outsole</li>
     </ul>
+    <a href="#" class="buy-button">🛒 สั่งซื้อรุ่นนี้</a>
   </div>
 
   <h2>🔍 เปรียบเทียบรุ่น</h2>
   <table>
-    <tr>
-      <th>รุ่น</th>
-      <th>น้ำหนัก</th>
-      <th>ดรอป</th>
-      <th>โฟม</th>
-      <th>ราคา</th>
-      <th>เหมาะสำหรับ</th>
-    </tr>
-    <tr>
-      <td>Rebel v5</td>
-      <td>~220g</td>
-      <td>6mm</td>
-      <td>FuelCell PEBA/EVA</td>
-      <td>฿4,990</td>
-      <td>วิ่งทุกวัน / วิ่งเร็ว</td>
-    </tr>
-    <tr>
-      <td>1080 v14</td>
-      <td>~285g</td>
-      <td>6mm</td>
-      <td>Fresh Foam X</td>
-      <td>฿6,000</td>
-      <td>วิ่งไกล / เดินทั่วไป</td>
-    </tr>
-    <tr>
-      <td>Elite v4</td>
-      <td>~235g</td>
-      <td>4mm</td>
-      <td>FuelCell PEBA + Carbon</td>
-      <td>฿9,000</td>
-      <td>แข่งมาราธอน</td>
-    </tr>
+    <thead>
+      <tr>
+        <th>รุ่น</th>
+        <th>น้ำหนัก</th>
+        <th>ดรอป</th>
+        <th>โฟม</th>
+        <th>ราคา</th>
+        <th>เหมาะสำหรับ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rebel v5</td>
+        <td>~220g</td>
+        <td>6mm</td>
+        <td>FuelCell PEBA/EVA</td>
+        <td>฿4,990</td>
+        <td>วิ่งทุกวัน / วิ่งเร็ว</td>
+      </tr>
+      <tr>
+        <td>1080 v14</td>
+        <td>~285g</td>
+        <td>6mm</td>
+        <td>Fresh Foam X</td>
+        <td>฿6,000</td>
+        <td>วิ่งไกล / เดินทั่วไป</td>
+      </tr>
+      <tr>
+        <td>Elite v4</td>
+        <td>~235g</td>
+        <td>4mm</td>
+        <td>FuelCell PEBA + Carbon</td>
+        <td>฿9,000</td>
+        <td>แข่งมาราธอน</td>
+      </tr>
+    </tbody>
   </table>
 
 </body>
